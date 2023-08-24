@@ -57,7 +57,7 @@
     <br>
     <section class="about-us">
           
-            <div class="card col-12 col-md-12 col-lg-12">
+            <!--<div class="card col-12 col-md-12 col-lg-12">-->
               <h2 class="section-title">About Us</h2>
 
               <div class="card-big">
@@ -70,87 +70,47 @@
             
                   </div>
               </div>
-            </div>
-            
+        
   </section>
   
-    {{-- <section class="quote-container text-center">
-      <div class="quote-form-container">
-          <div class="container">
-              <div class="row justify-content-center">
-                  <div class="col-lg-8">
-                      <div class="quote-form">
-                         
-                          <form id="quoteForm">
-                              
-      <div class="form-group">
-        <label for="name">Your Name *</label>
-        <input type="text" class="form-control" id="name" name="name" required>
-    </div>
-    <div class="form-group">
-        <label for="email">Your Email Address *</label>
-        <input type="email" class="form-control" id="email" name="email" required>
-    </div>
-    <div class="form-group">
-        <label for="serviceType">Type of Service *</label>
-        <select class="form-control" id="serviceType" name="serviceType" required>
-            <option value="gameDev">Game Development</option>
-            <option value="gamingProd">Gaming Products</option>
-        </select>
-    </div>
-    {{-- <div class="form-group">
-        <label for="platform">Platform Preference</label>
-        <input type="text" class="form-control" id="platform" name="platform">
-    </div> --}}
-    {{-- <div class="form-group">
-        <label for="features">Features Required</label>
-        <textarea class="form-control" id="features" name="features" rows="4"></textarea>
-    </div>
-    <div class="form-group">
-        <label for="budget">Budget Range</label>
-        <input type="text" class="form-control" id="budget" name="budget">
-    </div>
-    <div class="form-group">
-        <label for="message">Additional Information</label>
-        <textarea class="form-control" id="message" name="message" rows="4"></textarea>
-    </div>
-                              <div class="text-center">
-                                  <button type="submit" class="btn btn-primary">Get a Quote</button>
-                              </div>
-                          </form>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </section> --}}
-
+   
 </body>
 <br>
 <br>
-<form id="quoteForm">
 <div class="dragArea row">
-  <div class="wrapper-form" style="margin-left: 40px;">
+  <div class="wrapper-form" >
     <h3 class="text-white mb-4">Get a Quote</h3>
-    
+  @if(session('centerSuccess'))
+    <div class="overlay">
+        <div class="success-message">
+            {{ session('centerSuccess') }}
+            <button class="close-button" id="closeButton">Close</button>
+        </div>
+    </div>
+@endif
+
+
+    <form id="quoteForm" action="{{ route('quote') }}" method="post">
+      @csrf
       <div class="form-con">
-          <input type="text" name="name" data-form-field="Name" required="required" class="form-control oval-input display-7" placeholder="Your Name " id="name-forms4-8c" style="height: 50px;">
-          <br>
-          <input type="text" name="email" data-form-field="E-mail" class="form-control oval-input display-7" required="required" placeholder="Your E-mail Address" id="email-forms4-8c" style="height: 50px;">
-          <br>
-          <input type="text" name="FeaturesRequired" data-form-field="E-mail" class="form-control oval-input display-7" required="required" placeholder="Features Required" id="email-forms4-8c" style="height: 50px;">
-          <br>
-          <input type="text" name="BudgetRange" data-form-field="E-mail" class="form-control oval-input display-7" required="required" placeholder="Budget Range" id="email-forms4-8c"style="height: 50px;">
-          <br>
-          <textarea name="Message" placeholder="Additional Information" data-form-field="Message" class="form-control textarea oval-input display-7" id="Message-forms4-8c" style="height: 100px;"></textarea>
-          <br>
-          <div class="mbr-section-btn">
-            <button type="submit" class="btn btn-primary display-7" style="border-radius: 50px; width: 150px;">Submit</button>
-          </div>
-          
+        <input type="text" name="name" data-form-field="Name" required="required" class="form-control oval-input display-7" placeholder="Your Name " id="name-forms4-8c" style="height: 50px;">
+        <br>
+        <input type="text" name="email" data-form-field="E-mail" class="form-control oval-input display-7" required="required" placeholder="Your E-mail Address" id="email-forms4-8c" style="height: 50px;">
+        <br>
+        <input type="text" name="FeaturesRequired" data-form-field="E-mail" class="form-control oval-input display-7" required="required" placeholder="Features Required" id="email-forms4-8c" style="height: 50px;">
+        <br>
+        <input type="text" name="BudgetRange" data-form-field="E-mail" class="form-control oval-input display-7" required="required" placeholder="Budget Range" id="email-forms4-8c"style="height: 50px;">
+        <br>
+        <textarea name="Message" placeholder="Additional Information" data-form-field="Message" class="form-control textarea oval-input display-7" id="Message-forms4-8c" style="height: 100px;"></textarea>
+        <br>
+        <div class="mbr-section-btn">
+          <button type="submit" class="btn btn-primary display-7" style="border-radius: 50px; width: 150px;">Submit</button>
+        </div>
       </div>
+    </form>
   </div>
 </div>
+
 <br>
 
 
@@ -181,15 +141,19 @@
                           <div class="cotacts-icon">
                               <span class="amp-iconfont fa-envelope fa"></span>
                           </div>
-                          <p class="mbr-text mbr-fonts-style mbr-regular display-4"><strong>EMAIL:</strong><br><span>demomail@test.org<br></span></p>
+                          <p class="mbr-text mbr-fonts-style mbr-regular display-4"><strong>EMAIL:</strong><br><span>contact@auricletechnologies.com<br></span></p>
                       </div>
                   </div>
               </div>
           </div>
-          <div class="col-lg-6">
-            <div class="map-block mbr-col-sm-12 mbr-jc-c mbr-flex mbr-m-auto mbr-column mbr-col-md-7">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d220.18644260501418!2d73.34259678603189!3d27.994414007983714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1687893595114!5m2!1sen!2sin" style="width:600px; height: 600px;"></iframe>
-            </div>
+          
+         <div class="col-lg-6">
+    <div class="map-block mbr-col-sm-12 mbr-jc-c mbr-flex mbr-m-auto mbr-column mbr-col-md-7" style="margin-top: 20px;">
+        <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d220.18644260501418!2d73.34259678603189!3d27.994414007983714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1687893595114!5m2!1sen!2sin" style="width: 100%; max-width: 800px; height: 400px;"></iframe>
+    </div>
+</div>
+
+          </div>
         </div>
       </div>
   </div>
@@ -203,14 +167,39 @@
       background-image: url('/assets/img/9.jpg');
       
     } */
-    .dragArea-row {
-    border: 2px dashed white;
-    border-radius: 30px;
-    padding: 1.5rem;
-    width: 650px!important; 
-    margin-left: 50px !important; 
+    
+.dragArea-row {
+    border: 2px dashed white !important;
+    border-radius: 30px !important;
+    padding: 1.5rem !important;
+    width: calc(100% - 4px) !important;*/
+    max-width: 650px !important;
+    margin: 0 2px !important;*/
+    margin-bottom: 20px !important;
+   
+}
+
+
+   .wrapper-form{
+       margin-left:25px;
+   }
+@media (max-width: 768px) {
+   
+    
+    .wrapper-form {
+        /*margin-left: 15px; */
+        /*margin-right: 15px; */
+    }
+    .card-big{
+        margin-left: 15px;
+        margin-right:-15px;
+    }
+     .body {
+        overflow-x: hidden !important;   
+    }
     
 }
+
 .form-control::placeholder {
         text-align: center;
     }
@@ -227,6 +216,44 @@
 
 
 }
+
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.success-message {
+    background-color: #f0f8eb;
+    color: green;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+    width:300px;
+    height:50px;
+}
+
+.close-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 3px;
+    right: 10px;
+    color: gray;
+}
+
+
+
 
 .form-con {
     border: 2px dashed white;
@@ -259,6 +286,8 @@
     height: 100%;
     border-radius: 6px;
     padding: 1rem 2rem;
+    margin-left:10px;
+    margin-right:5px;
 }
    
 
@@ -478,4 +507,13 @@
             }, 800);
         });
     });
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const closeButton = document.getElementById('closeButton');
+    closeButton.addEventListener('click', function () {
+        const overlay = document.querySelector('.overlay');
+        overlay.style.display = 'none';
+    });
+});
 </script>

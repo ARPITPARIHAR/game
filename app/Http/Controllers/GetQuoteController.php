@@ -9,17 +9,18 @@ class GetQuoteController extends Controller
 {
     public function store(Request $request)
     {
-        // dd($request->all());
-        $data=new Getquote;
-    $data->name=$request->name;
-    $data->email=$request->email;
-    $data->Features_required=$request->FeaturesRequired;
-    $data->	Budget_range=$request->BudgetRange;
-    $data->Message=$request->Message;
-    $data->save();
-    $request->session()->flash('centerSuccess', 'User detail has been submitted successfully!');
+        
+    
+        $data = new Getquote;
+        $data->name = $request->name;
+        $data->email = $request->email;
+        $data->Features_required = $request->FeaturesRequired;
+        $data->Budget_range = $request->BudgetRange;
+        $data->Message = $request->Message;
+        $data->save();
+        
+        $request->session()->flash('centerSuccess', ' Quote sent successfully!');
 
-    return redirect()->back();
-     }
-     
+        return redirect()->back();
+    }
 }
