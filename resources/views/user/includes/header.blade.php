@@ -9,8 +9,9 @@
       <div class="row">
           <div class="col-lg-12">
               <div class="main_title">
-                  <div class="portfolio-heading">
-                      <h4 id="portfolioSection">Our Portfolio</h4>
+                  
+                    <div class="portfolio-heading" id="portfolioSection">
+                      <h4 >Our Portfolio</h4>
                   </div>
               </div>
           </div>
@@ -77,8 +78,9 @@
 </body>
 <br>
 <br>
-<div class="dragArea row">
+<div class="dragArea row"  id ="quotecontainer">
   <div class="wrapper-form" >
+   
     <h3 class="text-white mb-4">Get a Quote</h3>
   @if(session('centerSuccess'))
     <div class="overlay">
@@ -268,7 +270,7 @@
 
 
     .contacts4 {
-            background-color: #fed1c3; /* Set the desired background color */
+            background-color: #fed1c3; 
         }
 
     .display-4 {
@@ -334,9 +336,9 @@
 }
 
 .matter {
-    font-size: 0.2em; /* Adjust the font size as needed */
+    font-size: 0.2em; 
     font-weight: normal;
-    color: #3f485d; /* Adjust the color as needed */
+    color: #3f485d; 
 }
 
 .bold-address {
@@ -441,9 +443,9 @@
 
   .portfolio-heading {
     text-align: center;
-    background-color:black; /* Background color */
-    border-radius: 50%; /* Make it round */
-    padding: 20px; /* Add some spacing */
+    background-color:black; 
+    border-radius: 50%; 
+    padding: 20px;
     display: inline-block;
   }
 
@@ -491,23 +493,23 @@
 
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script>
-    $(document).ready(function() {
-        $('#portfolioButton').click(function(e) {
-            e.preventDefault();
-            $('html, body').animate({
-                scrollTop: $('#portfolioSection').offset().top
-            }, 800);
-        });
+    <script>
+        $(document).ready(function() {
+            $('#portfolioButton').click(function(e) {
+                e.preventDefault();
+                $('html, body').animate({
+                    scrollTop: $('#portfolioSection').offset().top
+                }, 800);
+            });
 
-        $('#quoteButton').click(function(e) {
-            e.preventDefault();
-            $('html, body').animate({
-                scrollTop: $('.quote-container').offset().top
-            }, 800);
+            $('#quoteButton').click(function(e) {
+                e.preventDefault();
+                $('html, body').animate({
+                    scrollTop: $('#quotecontainer').offset().top
+                }, 800);
+            });
         });
-    });
-</script>
+    </script>
 <script>
 document.addEventListener('DOMContentLoaded', function () {
     const closeButton = document.getElementById('closeButton');

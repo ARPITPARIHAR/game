@@ -5,16 +5,17 @@
             <li class="g_heading">Project</li>
             <li><a href="{{route('dashboard')}}"><i class="fa fa-list-ul"></i><span>Dashboard</span></a></li>
             <li><a href="{{route('portfolio.create')}}"><i class="fa fa-list-ul"></i><span>Portfolio</span></a></li>
-            <li><a href="javascript:void(0)"><i class="fa fa-tag"></i><span>ContactUs</span></a></li>
-            <li><a href="{{route('websetting.edit')}}"><i class="fa fa-user"></i><span>Web setting</span></a></li> 
+          
+            <li><a href="{{route('websetting.edit')}}"><i class="fa fa-user"></i><span>Web setting</span></a></li>
+            <li><a href=""><i class="fa fa-tag"></i><span>Log Out</span></a></li> 
             {{-- <li class="active"><a href="{{route('admin.students')}}"><i class="fa fa-dashboard"></i><span>Students</span></a></li>                        
             <li><a href="{{route('admin.setting.edit')}}"><i class="fa fa-list-ol"></i><span>School Info</span></a></li>
             <li><a href="{{route('admin.slider.create')}}"><i class="fa fa-calendar-check-o"></i><span>Slider</span></a></li>
             <li><a href="{{route('admin.service.create')}}"><i class="fa fa-list-ul"></i><span>service</span></a></li>
             <li><a href="{{route('admin.fees.index')}}"><i class="icon-tag"></i><span>Fees Details</span></a></li>
             <li><a href="{{route('admin.attendence.index')}}"><i class="fa fa-user"></i><span>Attendence</span></a></li> --}}
-            <li><a href="project-todo.html"><i class="fa fa-check-square-o"></i><span>Todo List</span></a></li>
-            <li class="g_heading">App</li>
+            {{-- <li><a href="project-todo.html"><i class="fa fa-check-square-o"></i><span>Todo List</span></a></li> --}}
+            {{-- <li class="g_heading">App</li> --}}
             {{-- <li><a href="app-calendar.html"><i class="fa fa-calendar"></i><span>Calendar</span></a></li> --}}
             {{-- <li><a href="app-chat.html"><i class="fa fa-comments"></i><span>Chat</span></a></li> --}}
             {{-- <li><a href="app-contact.html"><i class="fa fa-address-book"></i><span>Contact</span></a></li> --}}

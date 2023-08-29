@@ -20,7 +20,7 @@
                   <div class="col-md-6 col-12">
                       <div class="form-group">
                         <label for="" class="form-label">Sitename</label>
-                        {{-- <input type="text" name="site_name" class="form-control" value="{{old('site_name') ?? $setting->site_name}}" placeholder="Enter Site Name"> --}}
+                        <input type="text" name="site_name" class="form-control" value="{{old('site_name') ?? $setting->site_name}}" placeholder="Enter Site Name">
                         @error('site_name')
                           <div  class="tex-danger">{{$message}}</div>
                         @enderror
@@ -29,7 +29,7 @@
                   <div class="col-md-6 col-12">
                     <div class="form-group">
                       <label for="" class="form-label">Email</label>
-                      {{-- <input type="text" name="email" class="form-control" value="{{old('email') ?? $setting->email}}" placeholder="Enter email"> --}}
+                      <input type="text" name="email" class="form-control" value="{{old('email') ?? $setting->:emai"}}" placeholder="Enter email">
                       @error('email')
                         <div  class="tex-danger">{{$message}}</div>
                       @enderror
@@ -39,7 +39,7 @@
                   <div class="col-md-6 col-12">
                     <div class="form-group">
                       <label for="" class="form-label">Phone</label>
-                      {{-- <input type="text" name="phone" class="form-control" value="{{old('phone') ?? $setting->phone}}" placeholder="Enter mobile nu"> --}}
+                      <input type="text" name="phone" class="form-control" value="{{old('phone') ?? $setting->"phone"}}" placeholder="Enter mobile nu">
                       @error('phone')
                         <div  class="tex-danger">{{$message}}</div>
                       @enderror
@@ -47,16 +47,16 @@
                     <div class="col-md-12 col-12">
                       <div class="form-group">
                         <label for="" class="form-label">Address</label>
-                        {{-- <textarea name="address" id=""  rows="5" class="form-control" placeholder="Enter Addres">{{old('address') ?? $setting->address}}</textarea> --}}
+                        <textarea name="address" id=""  rows="5" class="form-control" placeholder="Enter Addres">{{old('address') ?? $setting->address}}</textarea>
                       </div>
                     </div>
                   <div class="col-md-6 col-12">
-                    {{-- <img src="{{asset('uploads/business/'.$setting->logo)}}" alt="" width="100"> --}}
+                    <img src="{{asset('uploads/business/'.$setting->logo)}}" alt="" width="100">
                   </div>
                   <div class="col-md-6 col-12">
                     <div class="form-group">
                       <label for="" class="form-label">logo</label>
-                      {{-- <input type="file" name="logo" class="form-control" value="{{old('logo') ?? $setting->lpgo}}" placeholder="Enter email"> --}}
+                      <input type="file" name="logo" class="form-control" value="{{old('logo') ?? $setting->lpgo}}" placeholder="Enter email">
                       @error('logo')
                         <div  class="tex-danger">{{$message}}</div>
                       @enderror                      

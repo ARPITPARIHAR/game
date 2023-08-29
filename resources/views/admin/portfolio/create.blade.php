@@ -20,7 +20,7 @@
                 @csrf
                 <div class="col-md-4 col-4">
                     <div class="form-group">
-                      <label for="" class="form-label">service Photo</label>
+                      <label for="" class="form-label">Portfolio Photo</label>
                       <input type="file" name="thumbnail_img" class="form-control" placeholder="Choose Photo">
                     </div>
                   </div>
